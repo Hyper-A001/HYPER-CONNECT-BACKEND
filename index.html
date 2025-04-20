@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hyper A Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Voucher Management</h1>
+
+    <form id="voucherForm">
+      <input type="text" id="code" placeholder="Enter Voucher Code" required>
+      <select id="duration" required>
+        <option value="" disabled selected>Select Duration</option>
+        <option value="daily">Daily (500 TSH)</option>
+        <option value="weekly">Weekly (2,800 TSH)</option>
+        <option value="monthly">Monthly (12,000 TSH)</option>
+      </select>
+      <button type="submit">Add Voucher</button>
+    </form>
+
+    <h2>Available Vouchers</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Duration</th>
+          <th>Status</th>
+          <th>Created</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="voucherTableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
